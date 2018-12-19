@@ -6,7 +6,7 @@
 
 using namespace std;
 int main(int argc, char* argv[]) {
-    Eulerian *en = new Eulerian();
+    auto *en = new Eulerian();
     bool flagm = false;
     bool flagt = false;
 
@@ -42,8 +42,8 @@ int main(int argc, char* argv[]) {
     {
         while ( getline (f,line) )
         {
-            n = stoi(line.substr(0, line.find(" ")));
-            m = stoi(line.substr(line.find(" ")));
+            n = stoi(line.substr(0, line.find(' ')));
+            m = stoi(line.substr(line.find(' ')));
 
             if(m >= n){
                 printf("No se puede hacer la operación porque en n=%d y m=%d n < m",n,m);
